@@ -29,7 +29,7 @@ public class Loteria {
 		return ResponseEntity.ok().body(apostadas);
 		
 	}
-	@GetMapping(value= "/newbet/{id}")
+	@GetMapping(value= "/criaraposta/{id}")
 	public ResponseEntity<?> create(@PathVariable("id") String email) {
 		Aposta aposta = lotService.create(email);
 		return ResponseEntity.ok().body(aposta);
